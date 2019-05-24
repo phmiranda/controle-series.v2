@@ -1,0 +1,18 @@
+# comentário
+.idea/
+nbproject/
+.vscode
+*.iml
+
+# comentário
+composer.lock
+package-lock.json
+.env
+
+# comentário
+node_modules/
+vendor/
+
+# comentário
+Homestead.json
+Homestead.yaml
