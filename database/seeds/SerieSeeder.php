@@ -1,0 +1,17 @@
+<?php
+
+use App\Serie;
+use Illuminate\Database\Seeder;
+
+class SerieSeeder extends Seeder {
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run() {
+        Serie::create([
+            'nome' => 'O Justiceiro'
+        ]);
+    }
+}
