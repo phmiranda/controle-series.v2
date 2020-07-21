@@ -9,14 +9,13 @@
 namespace App\Http\Middleware;
 
 use App\User;
-
 use Closure;
 use Exception;
 use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 
 class Autenticador {
-    public function handler(Request $request, Closure $next) {
+    public function handler(Request $request, Closure $closure) {
         try {
             if (!$request->hasHeader('Authorization')) {
                 throw new Exception();
@@ -31,9 +30,9 @@ class Autenticador {
                 throw new Exception();
             }
 
-            return $next ($request);
+            return $closure ($request);
         }catch (Exception $exception){
-            return response()->json('Não autorizado a acessar recursos',401);
+            return response()->json('Não autorizado a acessar os recursos',401);
         }
     }
 }
